@@ -6,6 +6,7 @@ dotenv.config();
 
 app.listen(process.env.PORT);
 app.use(cookieParser());
+app.use(express.json());
 
 const userRouter = require('./routes/users');
 const teamRouter = require('./routes/teams');
