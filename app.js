@@ -1,13 +1,11 @@
-//app.js
-// express 모듈
 const express = require('express');
 const app = express();
-
-// dotenv 모듈
+const cookieParser = require('cookie-parser');
 const dotenv = require('dotenv');
 dotenv.config();
 
 app.listen(process.env.PORT);
+app.use(cookieParser());
 
 const userRouter = require('./routes/users');
 const teamRouter = require('./routes/teams');
